@@ -1,1 +1,1 @@
-# student-repo-template
+# demo repository
