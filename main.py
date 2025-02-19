@@ -21,6 +21,8 @@ def handle_events():
 
 def main():
     screen = init_game()
+    clock = pygame.time.Clock() # Initialize the clock object
+    
     running = True
     while running:
         running = handle_events()
@@ -28,6 +30,9 @@ def main():
         # Draw the initials on the screen
         draw_initials(screen)
         pygame.display.flip()
+
+        # Limit frame rate to certain number of frames per second (FPS)
+        clock.tick(config.FPS)
 
     pygame.quit()
     sys.exit()
